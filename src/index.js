@@ -4,9 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+function MyApp() {
+  return (
+  <div>
+    <App />
+  </div>
+  );
+}
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MyApp />
   </React.StrictMode>,
   document.getElementById('root')
 );

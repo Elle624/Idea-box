@@ -1,4 +1,175 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-section {
+  display: flex;
+  background: linear-gradient(to top, rgb(118, 170, 238) 0%, rgba(162,201,255,1) 28%, rgba(0,123,255,1) 63%);
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+.left-side {
+  background:radial-gradient(rgb(91, 126, 243), rgb(43, 78, 192));
+  width: 25%;
+  color: #fff;
+}
+
+.title-section {
+  height: 10%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter {
+  padding: 2em 1em;
+  border-top: 0.1em solid rgba(201, 211, 224, 0.3);
+  border-bottom: 0.1em solid rgba(201, 211, 224, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter button {
+  height: 2em;
+  width: 50%;
+  margin-top: 2em;
+  font-size: 1em;
+}
+
+.filter button:hover {
+  cursor: pointer;
+}
+
+.right-side {
+  width: 75%;
+}
+
+.idea-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 19em;
+  width: auto;
+  padding-top: 2em;
+}
+
+.idea-form label:last-child {
+  display: inline;
+  margin-bottom: 1em;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+.idea {
+  margin: 1em 0 1em 0;
+  width: 20em;
+  height: 2em;
+}
+
+.idea-content {
+  height: 4em;
+}
+
+.idea-submit {
+  width: 11em;
+  height: 1.5em;
+  background-color: rgb(10, 76, 189);
+  color: rgb(206, 236, 250);
+  font-size: 1.5em;
+  margin: 0 0 1em 0;
+}
+
+.idea-submit:hover {
+  cursor: pointer;
+}
+
+.search-icon {
+  font-size: 2em; 
+  background: rgb(10, 76, 189);
+}
+
+
+.display-ideas {
+  background:radial-gradient(rgb(142, 202, 241), rgb(190, 221, 241));
+  min-height: 36em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.idea-box {
+  height: 16em;
+  width: 20%;
+  margin: 1em 1em 0 1em;
+}
+
+.box-nav {
+  background-color: rgb(43, 78, 192);
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-icon {
+  font-size: 2em;
+  margin: 0.3em 0.1em;
+  color: rgb(183, 217, 249);
+}
+
+.box-icon:hover {
+  cursor: pointer;
+}
+
+.box-content {
+  height: 60%;
+  background: #fff;
+}
+
+.box-content p {
+  padding: 0 1em;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  line-height: 145%;
+}
+
+.box-content p:first-child {
+  padding-top: 1em;
+}
+
+.box-comment {
+  background-color: rgb(0,123,255);
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-comment a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-style: italic;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +206,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
