@@ -17,10 +17,24 @@ class Form extends Component {
     })
   }
 
-
   handleClick = (event) => {
     event.preventDefault();
-    this.props.getIdea({id: new Date().getTime(), title: this.state.title, body: this.state.body, isFav: false});
+    const newIdea = {
+      id: new Date().getTime(), 
+      title: this.state.title, 
+      body: this.state.body, 
+      isFav: false
+    };
+
+    const storedIdeas = JSON.parse(localStorage.getItem('idea'));
+    if (storedIdeas) {
+      storedIdeas.push(newIdea);
+      localStorage.setItem('idea', JSON.stringify(storedIdeas))
+    } else {
+      localStorage.setItem('idea', JSON.stringify([newIdea]))
+    }
+  
+    this.props.getIdea(newIdea);
     this.setState({
       title: '',
       body: ''

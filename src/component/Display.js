@@ -3,7 +3,7 @@ import { BiHighlight, BiLike, BiX } from "react-icons/bi";
 
 function Display(props) {
 
-  const filterIdeas = props.ideas.filter(idea => idea.isFav === true)
+  const favIdeas = props.ideas.filter(idea => idea.isFav === true)
 
   function displayIdeas(ideas) {
     return ideas.map(idea => {
@@ -28,7 +28,7 @@ function Display(props) {
   
   return (
       <section className="display-ideas">
-      {props.showFav ? displayIdeas(filterIdeas) : displayIdeas(props.ideas)}
+      {props.showFav ? displayIdeas(favIdeas) : displayIdeas(props.ideas)}
       </section>
   )
   

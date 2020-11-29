@@ -14,6 +14,12 @@ class App extends Component {
       showFav: false
     }
   }
+  componentDidMount = () => {
+    const storedIdeas = JSON.parse(localStorage.getItem('idea')) || [];
+    this.setState({
+      ideas: storedIdeas
+    })
+  }
 
   storeIdeas = (idea) => {
     this.setState({
@@ -37,6 +43,7 @@ class App extends Component {
     this.setState({
       ideas: updatedIdeas
     })
+    localStorage.setItem('idea', JSON.stringify(updatedIdeas))
   }
 
   displayfavIdeas = (event) => {
@@ -44,10 +51,6 @@ class App extends Component {
     this.setState((prevState) => {
       return {showFav: !prevState.showFav}
     })
-    // const favIdeas = this.state.ideas.filter(idea => idea.isFav === true);
-    // this.setState({
-    //   ideas: [...favIdeas]
-    // })
   }
 
   removeIdea = (id) => {
@@ -55,6 +58,7 @@ class App extends Component {
     this.setState({
       ideas: updatedIdeas
     })
+    localStorage.setItem('idea', JSON.stringify(updatedIdeas))
   }
   
   render() {
