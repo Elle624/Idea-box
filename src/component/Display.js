@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from './Modal';
 import { BiHighlight, BiLike, BiX } from "react-icons/bi";
 
 function Display(props) {
@@ -19,8 +20,9 @@ function Display(props) {
           </section>
           <section className="box-comment">
             <BiHighlight className="box-icon"/>
-            <a href="#"><strong>Comment</strong></a>
+            <button onClick={props.addComment}><strong>Comment</strong></button>
           </section>
+          {props.comment && <Modal />}
         </section>
       )
     })

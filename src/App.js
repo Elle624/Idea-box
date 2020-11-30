@@ -11,7 +11,8 @@ class App extends Component {
     super();
     this.state = {
       ideas: [],
-      showFav: false
+      showFav: false,
+      addComment: false
     }
   }
   componentDidMount = () => {
@@ -60,6 +61,12 @@ class App extends Component {
     })
     localStorage.setItem('idea', JSON.stringify(updatedIdeas))
   }
+
+  addComment = () => {
+    this.setState((prevState) => {
+      return {addComment: !prevState.addComment}
+    })
+  }
   
   render() {
     //console.log(this.state.ideas);
@@ -69,7 +76,13 @@ class App extends Component {
         <Nav StarredIdea={this.displayfavIdeas} showFav={this.state.showFav}/>
         <section className="right-side">
           <Form getIdea={this.storeIdeas} />
-          <Display ideas={this.state.ideas} showFav={this.state.showFav} fav={this.addFavIdea} remove={this.removeIdea}/>
+          <Display 
+            ideas={this.state.ideas} 
+            showFav={this.state.showFav}
+            comment={this.state.addComment}
+            fav={this.addFavIdea} 
+            remove={this.removeIdea} 
+            addComment={this.addComment}/>
         </section>
       </section>
     )

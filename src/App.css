@@ -51,7 +51,8 @@ h2 {
   font-size: 1em;
 }
 
-.filter button:hover {
+.filter button:hover,
+.box-comment button:hover {
   cursor: pointer;
 }
 
@@ -162,11 +163,54 @@ label {
   align-items: center;
 }
 
-.box-comment a {
+.box-comment button{
+  border: none;
+  background: none;
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
   font-style: italic;
+}
+
+.modal {
+  /* display: none; Hidden by default */
+  position: fixed; 
+  z-index: 1;
+  left: 50%;
+  top: 40%;
+  width: 20%; 
+  height: 25%; 
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 12.5% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+.comment-input {
+  margin: 1em 0;
+  width: 80%;
+  height: 2em;
+}
+
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: .25rem;
+  background-color: lightgray;
+}
+
+.close-button:hover,
+.comment-submit:hover {
+  background-color: darkgray;
+  cursor: pointer;
 }
 
 /* .App {
