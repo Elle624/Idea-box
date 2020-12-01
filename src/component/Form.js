@@ -23,7 +23,8 @@ class Form extends Component {
       id: new Date().getTime(), 
       title: this.state.title, 
       body: this.state.body, 
-      isFav: false
+      isFav: false,
+      comment: ''
     };
 
     const storedIdeas = JSON.parse(localStorage.getItem('idea'));
